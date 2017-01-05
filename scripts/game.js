@@ -21,9 +21,7 @@ function deckCards(cardCount) {
     for (var i = 0; i < totalCardCount; i++) {
         deck[i] = (i % cardCount) + 1;
     }
-    console.log(deck);
     shuffledDeck = shuffle(deck);
-    console.log(deck);
     for (var i = 0; i < totalCardCount; i++) {
         imgIndex = i + 1;
         imgId = 'img_' + imgIndex;
