@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/game.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./scripts/game.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+  <div class="container-fixed">
+    <div class="panel panel-info">
+      <div class="panel-heading">Memory Game [Click on the rectangles to match pictures]</div>
+      <div class="panel-body"> <div class="form-group">
+    <label for="inputsm">Enter the card count</label>
+    <input class="form-control input-lg" id="inputCardCount" type="number" min="1" max="10"  step="1">
+    <br/>
+    <button type="button" id="btnStart" class="btn btn-primary" onclick="startGame()">Start</button>
+  </div></div>
+      
+    </div>
+    <div id="gameBoard">
+    </div>
+    <div class="modal modal-transparent fade" id="modal-transparent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" ">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <button type="button " class="close " data-dismiss="modal"><span aria-hidden="true
+        ">&times;</span><span class="sr-only ">Close</span></button>
+          <h4 class="modal-title " id="myModalLabel ">You Won</h4>
+        </div>
+        <div class="modal-body ">
+        
+        </div>
+        <div class="modal-footer ">
+          <button type="button " class="btn btn-default " data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+ 
+</body>
+
+</html>
