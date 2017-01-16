@@ -11,7 +11,7 @@ function startGame() {
     $('#gameBoard').empty();
     createBoard(cardCount);
     deckCards(cardCount);
-    $('img').click(function () {
+    $("img[status='closed']").click(function () {
         toggleImage($(this));
     });
 }
@@ -45,6 +45,10 @@ function shuffle(array) {
 }
 
 function toggleImage(img) {
+    if (img.attr('status')=="opened")
+    {
+        return;
+    }
     var currentOpenedCardCount = $("img[status='opened']").length;
     clickCount++;
     if (currentOpenedCardCount == 0) {
@@ -137,7 +141,7 @@ function createBoard(cardCount) {
         jQuery('<div/>', {
             id: 'card_' + i,
             class: 'col-xs-2',
-            html: '<img id="img_' + i + '" class="img-responsive img" src="./images/frozen/game.jpeg" />'
+            html: '<img id="img_' + i + '" status="closed" class="img-responsive img" src="./images/frozen/game.jpeg" />'
         }).appendTo('#row_' + currentRow);
 
     }
